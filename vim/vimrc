@@ -11,6 +11,7 @@
 
   " Bundle "ervandew/supertab"
   " Bundle "vim-scripts/ZoomWin"
+  Bundle 'vim-airline/vim-airline'
   Bundle "austintaylor/vim-commaobject"
   Bundle "altercation/vim-colors-solarized"
   Bundle "tristen/vim-sparkup"
