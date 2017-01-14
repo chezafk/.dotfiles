@@ -1,6 +1,6 @@
 # My .dotfiles
 
-Instalation
+Installation
 -------------
 
 ```bash
