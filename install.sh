@@ -61,9 +61,19 @@ if [ ! -f ~/.dotfiles/vim/Vundle.vim ]; then
   cd ~/.dotfiles/vim && git clone https://github.com/gmarik/Vundle.vim.git
   vim +BundleInstall +BundleClean +BundleClean +quitall
 fi
+# install pathogen
+if [ ! -f ~/.vim/autoload/pathogen.vim ]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
 
 if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+if [ ! -f ~/.oh-my-zsh/antigen.zsh ]; then
+  curl https://cdn.rawgit.com/zsh-users/antigen/v1.3.2/bin/antigen.zsh > ~/.oh-my-zsh/antigen.zsh
+  source ~/.oh-my-zsh/antigen.zsh
 fi
 
 # cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
